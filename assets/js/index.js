@@ -1,3 +1,4 @@
+
 import { BASE_URL } from "./api.js";
 
 let tBobdy = document.querySelector("tbody");
@@ -9,6 +10,8 @@ let defaultBtn = document.querySelector(".btn-default");
 async function getAllData(endpoint) {
   try {
     const response = await axios.get(`${BASE_URL}/${endpoint}`);
+
+    console.log(response.data);
 
     filterProductsByTitle(response.data);
 
